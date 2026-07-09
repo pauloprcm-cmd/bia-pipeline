@@ -1,0 +1,12 @@
+services:
+  server:
+    image: 762397612249.dkr.ecr.us-east-1.amazonaws.com/bia:${TAG}
+    build: .
+    container_name: bia 
+    ports:
+      - 80:8080
+    environment:
+      DB_USER: postgres
+      DB_PWD: formacaobia2026
+      DB_PORT: 5432
+      DB_HOST: bia-db.c49isqoaswph.us-east-1.rds.amazonaws.com
